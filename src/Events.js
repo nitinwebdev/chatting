@@ -1,0 +1,5 @@
+module.exports ={
+
+DEFAULTMADE:'DEFAULTMADE',
+TYPING:'TYPING'
+}
