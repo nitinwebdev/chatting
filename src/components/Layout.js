@@ -1,6 +1,6 @@
 import React, {Component } from 'react';
-// import io from 'socket.io-client';
 import io from 'socket.io-client/dist/socket.io';
+
 import '../App.css';
 
 const socketUrl = "localhost:3231"
@@ -57,6 +57,7 @@ handleClick(){
 	                               }
 	}
 	render() {
+
   		const {title} = this.props
     	return (
       	<div className="main">
@@ -69,7 +70,7 @@ handleClick(){
 		</div>     
 
 		<input  className='Input_text' type="text"  ref='myInput' />
-			
+
 		<input type="button" className='Input_button' value="SEND" onClick={this.handleClick}
         />
       </div>

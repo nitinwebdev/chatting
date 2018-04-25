@@ -11,8 +11,8 @@ module.exports = function(socket){
 
 	socket.on('chat', function(input){
 		console.log(input);
-		io.sockets.emit('acknowledgement', '" '+ input
-			+' "');
+		io.sockets.emit('acknowledgement', ''+ input
+			+' ');
 	})
 	console.log("Socket Id :"+ socket.id);
 
