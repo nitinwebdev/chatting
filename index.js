@@ -6,10 +6,10 @@ var io = module.exports.io = require('socket.io')(app)
 
 const PORT =  process.env.PORT||3231;
 
-appo.use(express.static(path.join(__dirname, '../../build')));
+appo.use(express.static(path.join(__dirname, 'build/')));
 
 appo.get('/',(req, res, next) =>
-res.sendFile(__dirname+ './index.html'));
+res.sendFile(__dirname+ 'public/'));
 	
 const SocketManager = require('./SocketManager')
 io.on('connection',SocketManager);
