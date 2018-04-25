@@ -3,7 +3,7 @@ import io from 'socket.io-client/dist/socket.io';
 
 import '../App.css';
 
-const socketUrl = "localhost:3231"
+const socketUrl = "http://192.168.4.115:3231"
 class Layout extends Component {
 constructor(props){
 	super(props);
