@@ -3,7 +3,7 @@ import io from 'socket.io-client/dist/socket.io';
 
 import '../App.css';
 
-const socketUrl = "https://192.168.4.115:3000"
+const socketUrl = "https://young-citadel-86275.herokuapp.com"
 class Layout extends Component {
 constructor(props){
 	super(props);
