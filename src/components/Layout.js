@@ -1,6 +1,5 @@
 import React, {Component } from 'react';
 import io from 'socket.io-client/dist/socket.io';
-
 import '../App.css';
 
 const socketUrl = "https://young-citadel-86275.herokuapp.com"
@@ -29,8 +28,14 @@ initSocket = () =>{
 componentDidMount(){
 	let _this = this;
 	console.log('component did mount')
+	 //loader set timeout
 	// let socket = io(socketUrl);
 	// socket.on(('chat', msg =>{cons0ole.log(msg)});
+// _this.state.socket.on('loader', function(){
+// 	console.log('hey i am loader');
+// })
+
+
 	_this.state.socket.on('acknowledgement', function(output){
 		console.log(output);
 		let message = _this.state.message;
@@ -39,35 +44,28 @@ componentDidMount(){
 	})
 }
 
-// sendMessage(e){
-// 	let socket = io(socketUrl)
 
-// 	let msg = e.target.value;
-// 	socket.emit('chat',msg);
-// // this.setState({message:e.target.value})
-// }
 handleClick(){
-	if(this.refs.myInput !== null){
-		var input = this.refs.myInput.value;
-		// let socket = io(socketUrl)
-		// this.state.message.push(input)
-		// this.setState({message:this.state.message});
-		this.state.socket.emit('chat',input);
-		// console.log(input);
-	                               }
+let reg =/^[a-z0-9][a-z0-9._\s]*$/;
+let input = this.refs.myInput.value;
+	console.log('values', input, reg.test(input))
+if(!!input && reg.test(input)){
+this.state.socket.emit('chat',input);
+	  }else{alert('please  write valid input and check no space in starting')}
 	}
 	render() {
-
+    
   		const {title} = this.props
     	return (
+
       	<div className="main">
         <h1>{title}</h1>
-       	<div className='Box'>
-		<ul>{
-		     this.state.message.map((main, i)=><p key={i}>{main}</p>)
-			}
-		</ul>
-		</div>     
+       	           <div className='Box'>
+       	                        <ul>{ 
+		                        this.state.message.map((main, i)=><p key={i}>{main}</p>)
+			                                            }
+		                        </ul>
+		           </div>     
 
 		<input  className='Input_text' type="text"  ref='myInput' />
 

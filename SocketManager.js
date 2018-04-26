@@ -9,6 +9,12 @@ module.exports = function(socket){
 //   console.log(element +"this is it");
 // });
 
+    // socket.on('load',function(){
+    // 	console.log('this is loader running') // loader 
+    // })
+
+   
+
 	socket.on('chat', function(input){
 		console.log(input);
 		io.sockets.emit('acknowledgement', ''+ input
