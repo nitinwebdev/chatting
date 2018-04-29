@@ -4,7 +4,7 @@ const appo = express();
 var app = require('http').createServer(appo);
 var io = module.exports.io = require('socket.io')(app)
 
-const PORT =  process.env.PORT||3000;
+const PORT =  process.env.PORT||3333;
 
 appo.use(express.static(path.join(__dirname, 'build/')));
 

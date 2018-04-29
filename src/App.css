@@ -1,5 +1,25 @@
+.user:hover{
+  color: black;
+}
 
 
+.container1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.user{
+  float: left;
+  color:rgb(72, 79, 47);
+}
+.container1 {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 6px;
+  margin: 10px 0;
+  overflow-wrap: break-word;
+}
 
 
 .Box:hover{
@@ -18,20 +38,25 @@
   font-size: 19px;
   position: relative;
 width:290px;
+margin-right:40px; 
   padding-top: 10px;
 }
 .Box{
-
-padding:auto;
   border-radius: 8px;
+  padding-right: 39px;
 border-style: solid;
 border-color:grey;
-width:40%;
-height:400px;
+width:59%;
+color:darkred;
+height:350px;
+font-size: 12px;
+font-style: normal;
 margin: 0px auto;
 overflow-y: auto;
+}
 
-
+.Box ul {
+  list-style: none;
 }
 .main{
   
